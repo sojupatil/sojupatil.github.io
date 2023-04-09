@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sg.css">
+    <title>Hymn For The Weekend</title>
+</head>
+
+<body>
+    <audio id="source" preload="auto">
+        <source
+            src="https://archive.org/download/songp1/Coldplay%20-%20Hymn%20For%20The%20Weekend%20%28Official%20Video%29.mp3"
+            type="audio/mpeg">
+    </audio>
+    <button title="playpausebtn" id="playpause">PLAY</button>
+    <div>
+        <span id="curtimetext">00:00</span><input title="RANGE" type="range" id="seekslider" min="0" value="0">
+        <span id="durtimetext">00:00</span>
+    </div>
+    <script src="../js/sg.js"></script>
+</body>
+
+</html>
