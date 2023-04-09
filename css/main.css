@@ -59,7 +59,7 @@ body {
     color: rgba(255, 255, 255, 0.800);
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:350px) {
     .menumain a {
         font-size: 10px;
     }
