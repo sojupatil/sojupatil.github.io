@@ -1,8 +1,13 @@
 #seekslider {
-    width: max-content;
+    width: 100%;
 }
 
 #playpause {
     color: black;
     font-weight: 700;
+}
+
+.playerctrl{
+    display: flex;
+    justify-content: space-evenly;
 }
