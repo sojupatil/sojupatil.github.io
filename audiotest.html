@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Audio Example</title>
+</head>
+
+<body>
+    <h1>Cache Audio Example</h1>
+
+    <audio id="myAudio" controls>
+        <source
+            src="https://archive.org/download/songp1/Coldplay%20-%20Hymn%20For%20The%20Weekend%20%28Official%20Video%29.mp3"
+            type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="cacheButton">Cache Audio</button>
+
+    <script>
+        var cacheButton = document.getElementById("cacheButton");
+        cacheButton.addEventListener("click", function () {
+            var audioUrl = document.getElementById("myAudio").src;
+            caches.open("audio-cache").then(function (cache) {
+                cache.add(audioUrl);
+                console.log("Audio cached: " + audioUrl);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

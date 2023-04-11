@@ -16,12 +16,28 @@
             src="https://archive.org/download/songp1/Coldplay%20-%20Hymn%20For%20The%20Weekend%20%28Official%20Video%29.mp3"
             type="audio/mpeg">
     </audio>
+
     <div class="playerctrl">
-        <span id="curtimetext">00:00</span><input title="RANGE" type="range" id="seekslider" min="0" value="0">
-        <span id="durtimetext">00:00</span>
+        <h3>Coldplay - Hymn For The Weekend (Official Audio)</h3>
+        <img src="https://i.ytimg.com/vi/YykjpeuMNEk/hq720.jpg" alt="" class="bannerimage">
+        <input title="RANGE" type="range" id="seekslider" min="0" value="0">
+        <div class="time1">
+            <span id="curtimetext">00:00</span>
+            <button title="playpausebtn" id="playpause">PLAY</button>
+            <span id="durtimetext">00:00</span>
+        </div>
     </div>
-    <button title="playpausebtn" id="playpause">PLAY</button>
+
+    <div id="content"></div>
+
     <script src="../js/sg.js"></script>
+    <script>
+        fetch('../files/content.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('#content').innerHTML += html;
+            });
+    </script>
 </body>
 
 </html>
