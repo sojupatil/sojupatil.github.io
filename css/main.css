@@ -6,11 +6,15 @@
     padding: 0;
     color: #c0deff;
     -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 a {
     text-decoration: none;
 }
+
 
 ::selection {
     background-color: rgb(255, 255, 255);
